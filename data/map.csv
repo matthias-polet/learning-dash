@@ -1,0 +1,17 @@
+host_pubkey,row,column,fire,water,nature,biome
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,0,0,11,2,0,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,0,1,2,1,43,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,0,2,3,21,0,water
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,0,3,1,0,0,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,1,0,11,2,0,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,1,1,2,1,43,nature
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,1,2,3,21,0,water
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,1,3,1,0,0,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,2,0,11,2,0,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,2,1,2,1,43,nature
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,2,2,3,21,0,water
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,2,3,1,0,0,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,3,0,11,2,0,fire
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,3,1,2,1,43,nature
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,3,2,3,21,0,water
+1KSfWveXdLxudkZTCMTbXbNPJy5o2Rwxxi,3,3,1,0,0,fire
