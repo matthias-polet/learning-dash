@@ -7,7 +7,6 @@ import plotly.express as px
 import os
 import pathlib
 
-
 # Start app.
 app = Dash()
 app.title = "Learning python."
@@ -71,9 +70,13 @@ app.layout = html.Div(
 
     # Engage button.
     html.Button(
-        id="engage-button", n_clicks=0
+        'Engage',
+        id="engage-button",
+        n_clicks=0
     ),
-
+    html.Label(
+        id="engage-label"
+    ),
     # Subscription timer.
 
 ])
@@ -95,6 +98,15 @@ def generate_chart(data):
     fig = px.pie(None, values=values_list, names=names_list)
     return fig
 
+# Engage Button.
+@app.callback(
+    Output('engage-label', 'children'),
+    Input('engage-button', 'n_clicks')
+)
+def update_output(n_clicks):
+    return 'The input value was BROL and the button has been clicked {} times'.format(
+        n_clicks
+    )
 
 # Main run.
 if __name__ == "__main__":
