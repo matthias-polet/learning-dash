@@ -2,6 +2,8 @@ from dash import Dash, Input, Output
 from dash import dash_table as dt
 from dash import html
 from dash import dcc
+import dash_daq as daq
+
 import pandas as pd
 import plotly.express as px
 import os
@@ -80,6 +82,12 @@ app.layout = html.Div(
         id="engage-label"
     ),
     # Subscription timer.
+    daq.Gauge(
+        id="progress-gauge",
+        max=5 * 2,
+        min=0,
+        showCurrentValue=True,  # default size 200 pixel
+    ),
 
 ])
 
@@ -109,6 +117,13 @@ def update_output(n_clicks):
     return 'The input value was MISSING and the button has been clicked {} times'.format(
         n_clicks
     )
+
+@app.callback(
+    Output('progress-gauge', 'value'),
+    Input('engage-button', 'n_clicks')
+)
+def update_output(n_clicks):
+    return n_clicks
 
 # Image.
 @app.callback(
