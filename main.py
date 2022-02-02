@@ -104,7 +104,7 @@ def generate_chart(data):
     Input('engage-button', 'n_clicks')
 )
 def update_output(n_clicks):
-    return 'The input value was BROL and the button has been clicked {} times'.format(
+    return 'The input value was MISSING and the button has been clicked {} times'.format(
         n_clicks
     )
 
