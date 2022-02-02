@@ -20,6 +20,7 @@ df_map = pd.read_csv(os.path.join(APP_PATH, os.path.join("data", "map.csv")))
 df_map.columns = ['host_pubkey', 'row', 'column', 'fire', 'water', 'nature', 'biome']
 
 
+
 # Build map.
 def build_map(original_df):
     data = {'A': ['team0A', 'team1A', 'team2A', 'team3A'],
@@ -67,6 +68,7 @@ app.layout = html.Div(
     ),
 
     # Region details.
+    html.Img(id='image'),
 
     # Engage button.
     html.Button(
@@ -107,6 +109,18 @@ def update_output(n_clicks):
     return 'The input value was MISSING and the button has been clicked {} times'.format(
         n_clicks
     )
+
+# Image.
+@app.callback(
+    Output('image', 'src'),
+    [Input('world-map', 'active_cell')]
+)
+def update_image_src(value):
+    if df_map is not None and value is not None:
+        biome = df_map.iloc[value['row']][value['column']]
+        return '/assets/'+biome+'.jpg'
+    return '/assets/dash-logo-new.png'
+
 
 # Main run.
 if __name__ == "__main__":
